@@ -8,7 +8,9 @@ RUN npm run build
 RUN npm run blob
 RUN cp $(command -v node) dist
 
-RUN npx postject dist NODE_SEA_BLOB dist.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 
+RUN npx postject dist NODE_SEA_BLOB dist.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2
+
+# Build script now: tsc -> dist-ts/index.js, then esbuild bundles to dist.js
 
 FROM nginx:1.24.0
 

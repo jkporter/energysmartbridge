@@ -1,12 +1,11 @@
 export const MODE_MAPPING = {
-    'Electric': 'electric',
-    'Standard': "electric",
-    'Efficiency': "heat_pump",
-    'EnergySmart': "eco",
-    'Hybrid': "eco",
-    'Vacation': "off",
+    Electric: 'electric',
+    Standard: 'electric',
+    Efficiency: 'heat_pump',
+    EnergySmart: 'eco',
+    Hybrid: 'eco',
+    Vacation: 'off',
 };
-
 export const MAPPING = {
     DeviceText: 'deviceId',
     Password: 'password',
@@ -44,7 +43,6 @@ export const MAPPING = {
     AddrData: 'addressData',
     SignalStrength: 'signalStrength',
 };
-
 export const READABLE_MAPPING = {
     dryFire: 'Dry Fire Detected',
     ecoError: 'Eco Error Detected',
@@ -76,12 +74,10 @@ export const READABLE_MAPPING = {
     condensePumpFail: 'Condenser Pump Failed',
     airFilterStatus: 'Air Filter Status',
 };
-
 export const DEVICE_CLASS_MAPPING = {
     heating: 'heat',
     grid: 'connectivity',
     leak: 'moisture',
-
     masterDisplayFail: 'problem',
     tankSensorFail: 'problem',
     compressorSensorFail: 'problem',
@@ -92,13 +88,11 @@ export const DEVICE_CLASS_MAPPING = {
     dryFire: 'problem',
     ecoError: 'problem',
     elementFail: 'problem',
-
     upperTemperature: 'temperature',
     lowerTemperature: 'temperature',
     maxSetPoint: 'temperature',
-
     hotWaterVolume: 'enum',
-
     updateRate: 'duration',
     signalStrength: 'signal_strength',
 };
+//# sourceMappingURL=mappings.js.map
