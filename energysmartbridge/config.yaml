@@ -18,7 +18,8 @@ options:
   mqtt_username: null
   mqtt_password: null
   mqtt_prefix: "energysmartbridge"
-  mqtt_homeassistant_prefix: "homeassistant"
+  mqtt_homeassistant_prefix: "homeassistant",
+  mqtt_optimistic: false,
   log_level: list(fatal|error|warn|info|debug|trace)
 schema:
   mqtt_port: port
@@ -27,4 +28,5 @@ schema:
   mqtt_password: password
   mqtt_prefix: str
   mqtt_homeassistant_prefix: str
+  mqtt_optimistic: bool
   log_level: list(fatal|error|warn|info|debug|trace)
