@@ -7,7 +7,6 @@ init: false
 arch:
   - aarch64
   - amd64
-  - armv7
 ports:
   443/tcp: 443
 ports_description:
@@ -20,7 +19,7 @@ options:
   mqtt_prefix: "energysmartbridge"
   mqtt_homeassistant_prefix: "homeassistant",
   mqtt_optimistic: false,
-  log_level: list(fatal|error|warn|info|debug|trace)
+  log_level: "info"
 schema:
   mqtt_port: port
   mqtt_host: str
