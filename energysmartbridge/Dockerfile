@@ -18,6 +18,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 RUN openssl req  -nodes -new -x509 -sha1 -subj '/CN=energysmartwaterheater.com' -keyout /etc/nginx/energysmartwaterheater.com.key -out /etc/nginx/energysmartwaterheater.com.crt -days 3650
 
+RUN npm install -g pino-pretty
+
 COPY --from=build /build/dist ./app
 COPY run.sh .
 
