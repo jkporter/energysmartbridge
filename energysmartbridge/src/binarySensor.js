@@ -11,11 +11,6 @@ export class BinarySensor extends BaseEntity {
         this.value = this.convertValue(this.value);
     }
 
-    async bootstrap () {
-        await this.publishConfig();
-        await this.publishState();
-    }
-
     convertValue (value) {
         switch (value.toUpperCase()) {
             case 'DISABLED':

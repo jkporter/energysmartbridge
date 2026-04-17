@@ -17,11 +17,8 @@ export class Number extends BaseEntity {
     }
 
     async bootstrap () {
-        await this.publishConfig();
-
+        super.bootstrap();
         await this.mqtt.subscribe(this.commandTopic());
-
-        await this.publishState();
     }
 
     composeConfig () {
