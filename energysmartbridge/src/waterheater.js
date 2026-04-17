@@ -82,11 +82,16 @@ export class WaterHeater {
         // Process Units before the main loop so the unit symbol is available
         // for temperature sensor creation (LowerTemp, UpperTemp, MaxSetPoint)
         if ('Units' in queryParams) {
-            this[MAPPING['Units']] = queryParams['Units'];
             LOGGER.trace({ message: 'Got Unit', unit: queryParams['Units'] });
         } else {
-            LOGGER.warn({ message: 'No Units provided, defaulting to System' });
+            LOGGER.warn({ message: 'No Unit provided, defaulting to System' });
         }
+
+        if (this.units !== queryParams['Units']) {
+            this.units = queryParams['Units'];
+            await this.createHomeAssistantConfig(); // Regenerate HA config to update unit symbols
+        }
+
         const unit = this.units ? `°${this.units}` : undefined;
 
         for (const key of keys) {
